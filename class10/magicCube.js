@@ -54,25 +54,25 @@ function newArrayCube() {
     return cube;
 }
 
-// function move(frontalCube, leftCube, backCube, rightCube) {
-//     const down = 3;
-//     const array = [];
-//     change(array, frontalCube, down);
-//     frontalCube = unshift(leftCube.splice(0, down), frontalCube);
-//     leftCube = unshift(backCube.splice(0, down), leftCube);
-//     backCube = unshift(rightCube.splice(0, down), backCube);
-//     rightCube = unshift(array.splice(0, down), rightCube);
-//     console.log(frontalCube);
-//     console.log(rightCube);
-//     console.log(leftCube);
-//     console.log(backCube);
-// }
+function move(frontalCube, leftCube, backCube, rightCube) {
+    const down = 3;
+    const array = [];
+    change(array, frontalCube, down);
+    frontalCube = unshift(leftCube.splice(0, down), frontalCube);
+    leftCube = unshift(backCube.splice(0, down), leftCube);
+    backCube = unshift(rightCube.splice(0, down), backCube);
+    rightCube = unshift(array.splice(0, down), rightCube);
+    console.log(frontalCube);
+    console.log(rightCube);
+    console.log(leftCube);
+    console.log(backCube);
+}
 
-// function change(array, cube, down) {
-//     for(let i = 0; i < down; i++) {
-//         array[i] = cube.splice(i, down);
-//     }
-// }
+function change(array, cube, down) {
+    for(let i = 0; i < down; i++) {
+        array[i] = cube.splice(i, down);
+    }
+}
 
 // function unshift(array, array2) {
 //     for(let i = 2; i >= 0; i--) {
@@ -88,6 +88,7 @@ console.log(backCube);
 console.log(upCube);
 console.log(downCube);
 console.log(colors.length);
+//hi
 
 // while(validation(frontalCube) || validation(rightCube) || validation(leftCube) || validation(upCube) || validation(downCube) || validation(backCube)) {
 //     let regex = /\d/;
